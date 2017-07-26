@@ -1,7 +1,9 @@
 Files placed in the 'pages' folder will be automatically picked up in an active theme 
-using the value of the `view` query string parameter in following URL pattern:
+using the value of the `view` query string parameter in the following URL pattern:
 
-`//app/template/Page.vm?view=example`
+```
+/app/template/Page.vm?view=example
+```
 
 There are a few different options for file types and locations:
 
@@ -12,11 +14,20 @@ There are a few different options for file types and locations:
  - `/pages/example/content.html` - an HTML file named `content.html` in a named folder
 
 When a theme is active and contains a page that matches the name of a standard XNAT
-page, the theme's page content will have priority when loading. For example, if
+page, the _theme's_ page content will have priority when loading. For example, if
 you wanted to create a custom user management page for your theme, you would create
-a file with the following path and name:
+a file with the following path and name (relative to the theme root):
 
- - `/pages/admin/users/content.jsp`
+```
+/pages/admin/users/content.jsp
+```
+ 
+Then visiting the url below would display your theme's custom user admin page:
+
+```
+/app/template/Page.vm?view=admin/users
+```
+
  
 > As more standard pages move to this structure, they can very easily be overriden in a theme.
 
@@ -29,13 +40,13 @@ site administrators by putting restricted content inside a custom tag:
 
 Add this line at the top of the page where used taglibs are defined:
 
-```
+```xml
 <%@ taglib prefix="pg" tagdir="/WEB-INF/tags/page" %>
 ```
 
 Then put the secure content inside the custom `<pg:restricted>` tag:
 
-```
+```xml
 <pg:restricted> Administrators Only </pg:restricted>
 ```
 

@@ -1,3 +1,3 @@
-/* Default js file for XNAT "Dark" theme */
+/* Default js file for XNAT "Retro" theme */
 
-console.log('xnat-theme-retro');
+console.log('xnat-retro');
