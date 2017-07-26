@@ -1,0 +1,192 @@
+/* Style overrides for XNAT "Retro" theme */
+
+body, html body, * body {
+    color: #000;
+    background: #fff;
+    font-family: Verdana, Geneva, sans-serif !important;
+}
+
+#page_wrapper {
+    background: inherit;
+}
+
+#header {
+    background: inherit;
+}
+
+#header_logo {
+    float: right;
+    /*visibility: hidden;*/
+    /*opacity: 0.5;*/
+}
+
+/* <a> links */
+a,
+a.link,
+a.nolink,
+#user_bar a {
+    color: #3069bc;
+}
+
+/* user bar */
+#user_bar {
+    background: #fff;
+    color: #000;
+    border-bottom: 1px solid #aaa;
+}
+
+/* main nav */
+#main_nav {
+    background-color: #d0d0d0;
+    background-image: linear-gradient(#f8f8f8, #d0d0d0 80%, #c0c0c0);
+    /*background-image: linear-gradient(#d0d0d0, #e0e0e0 40%, #f8f8f8);*/
+    border-bottom: 1px solid #777;
+}
+
+#main_nav #nav-home {
+    background-image: url('../../../images/xnat-nav-logo-dark-lg.png') !important;
+    /*background-image: url('../../../images/xnat-nav-logo-black-lg.png') !important;*/
+    /*background-image: url('../images/xnat-nav-logo-retro-lg.png') !important;*/
+}
+#main_nav #nav-home:hover {
+    background-image: url('../../../images/xnat-nav-logo-white-lg.png') !important;
+}
+
+#main_nav ul.nav > li {
+    border-right: 1px solid #aaa;
+}
+
+#main_nav ul.nav > li {
+    border-right: 1px solid #aaa;
+}
+
+#main_nav ul.nav > li:first-of-type {
+    border-left: 1px solid #aaa;
+}
+
+#main_nav ul.nav > li > a {
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#main_nav ul.nav > li > a:hover,
+#main_nav ul.nav > li.active > a {
+    color: #fff;
+    background-color: #977926 !important;
+}
+
+#main_nav ul.nav li li a:hover {
+    background-color: #ffd;
+}
+
+#main_nav ul.nav li li.active,
+#main_nav ul.nav li li.active > a,
+#main_nav ul.nav li li.active > a:hover {
+    background-color: #ffb;
+}
+
+#main_nav ul.nav table.data-table tr:hover,
+#main_nav ul.nav table.data-table .item:hover {
+    background: #ffd !important;
+}
+
+/* tab styles */
+.yui-skin-sam .yui-navset .yui-nav .selected a,
+.yui-skin-sam .yui-navset .yui-nav .selected a em,
+.yui-skin-sam .yui-navset .yui-nav .selected a:focus,
+.yui-skin-sam .yui-navset .yui-nav .selected a:hover {
+    /*background: #957500;*/
+    background: #977926;
+    border-color: #977926;
+}
+
+.yui-skin-sam .yui-navset .yui-nav,
+.yui-skin-sam .yui-navset .yui-navset-top .yui-nav,
+#search_tabs.yui-navset.yui-navset-top > .wrangler {
+    border-bottom: 5px solid #977926 !important;
+}
+
+#front_search .yui-skin-sam .yui-navset .yui-nav a,
+#front_search .yui-skin-sam .yui-navset .yui-navset-top .yui-nav a {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.yui-skin-sam .yui-navset .yui-content {
+    background: #ffd;
+}
+
+/* actions menu */
+#actionsMenu > .bd > .first-of-type a {
+    background: #977926;
+}
+
+/* NEW tabs */
+.xnat-tab-content.side.pull-right {
+    border-left: 1px solid #aaa;
+}
+.xnat-nav-tabs li.tab {
+    border: 1px solid #aaa;
+}
+.xnat-nav-tabs.side li.tab > a {
+    border-right: 1px solid #aaa;
+}
+.xnat-nav-tabs.side li.tab.active > a {
+    border-left-color: #977926;
+}
+
+/* panels (admin page) */
+body.xnat .panel-default {
+    border: 1px solid #aaa;
+}
+body.xnat .panel-default .panel-body {
+    background: #ffd;
+}
+body.xnat .panel-default .panel-heading {
+    background: #977926;
+}
+body.xnat .panel-default .panel-footer {
+    border-top: 1px solid #ccc;
+    background: #efe6b5;
+}
+
+/* actions menu */
+#actionsMenu li a:hover,
+#actionsMenu li.yuimenuitem-hassubmenu > a:hover {
+    background-color: #ffd;
+}
+
+/* other widgets */
+body #accordion h3 {
+    background: #efe6b5 !important;
+    font-family: inherit !important;
+}
+body #accordion h3.active,
+div.download-column h3 {
+    background: #977926 !important;
+    border: 1px solid #755e20 !important;
+}
+body #accordion .content {
+    background: #fff;
+}
+body #accordion .content td.highlighted {
+    background: none;
+    border: none;
+}
+
+/* other ui elements */
+div.containerTitle.withColor {
+   background: #977926 !important;
+}
+
+.xnat-table {
+    color: #000;
+}
+
+.xnat-table tr.highlight:hover,
+.xnat-table.highlight tr:hover,
+.xnat-table.striped.highlight tr:hover {
+    background: #ffd;
+}
+

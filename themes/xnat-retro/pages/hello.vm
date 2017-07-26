@@ -1,0 +1,10 @@
+## The content of any page in the /pages folder
+## will be accessible at /app/template/Page.vm?view=name,
+## where the 'name' query string parameter is the name of
+## the file without the .vm extension. This is intended
+## to be used for page content that relies solely on XNAT's
+## REST service for receiving and sending data.
+
+<h1>Hello.</h1>
+
+<small>Hello from the 'xnat-retro' theme.</small>
