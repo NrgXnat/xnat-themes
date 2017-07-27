@@ -190,8 +190,6 @@ Other available tags can be explored in the `/WEB-INF/tags/page` folder in the X
 
 #### Other Theme-specific Resources and Variables
 
-When creating JSP theme templates, you'll need to
-
 When including theme-specific resources (images, html fragments, etc.) in your theme pages, you'll
 need to use the full path to the resource (relative to the site root). To load an image named `foo.png`
 into a JSP template from your theme's `/images/` folder, you can use the JSP variable `${themeRoot}`
@@ -245,12 +243,10 @@ The themes in this repo can be used as a reference and starting point for creati
 These will evolve with more detailed and concrete examples of how to create styles and pages for 
 XNAT themes.
 
-### XNAT "Retro" theme
-
-This theme includes a stylesheet that will turn your XNAT UI colors brown and yellow and uses Verdana
-as the main font, harkening back to XNAT 1.5 and earlier, before shades of blue dominated UI elements.
-
-_more themes to come..._
-
+- **XNAT "Retro" theme** \
+  This theme includes a stylesheet that will turn your XNAT UI colors brown and yellow and 
+  uses Verdana as the main font, harkening back to XNAT 1.5 and earlier, before shades of 
+  blue dominated UI elements.
+- _more themes to come..._
 
 <!-- to be continued...? -->
