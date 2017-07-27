@@ -26,8 +26,10 @@ echo ""
 
 [[ -e "${THEMENAME}.zip" ]] && PACKAGE="${THEMENAME}.zip"
 [[ -z ${PACKAGE} && -e "${THEMENAME}" ]] \
+    && { echo "Creating theme package..."; echo ""; } \
     && zip -r ${THEMENAME} ${THEMENAME} -x \*__MAC* \*.DS_Store \
-    && PACKAGE="${THEMENAME}.zip"
+    && PACKAGE="${THEMENAME}.zip" \
+    && { echo ""; echo "Theme packaged into .zip file."; echo ""; }
 
 [[ -z ${PACKAGE} || ! -e ${PACKAGE} ]] && echo "Theme package '${THEMENAME}' not found." && exit 1;
 
@@ -64,11 +66,16 @@ if [[ ! -z ${response} ]]; then
     echo ""
     read -p "Would you like to set the active theme to '${THEMENAME}'? [y/N] " YN
     echo ""
-    [[ ${YN} =~ [Yy] ]] && activeTheme=`curl -v -X PUT ${URL}/${THEMENAME} -u "${USER_PASS}"`
-    echo ""
-    echo "Theme activated."
-    echo "response: ${activeTheme}"
-    echo ""
+    if [[ ${YN} =~ [Yy] ]]; then
+        activeTheme=`curl -v -X PUT "${URL}/${THEMENAME}" -u "${USER_PASS}"`
+        echo ""
+        echo "Theme uploaded and activated."
+        echo "response: ${activeTheme}"
+        echo ""
+    else
+        echo "Theme uploaded but not activated."
+        echo ""
+    fi
 else
     echo ""
     echo "Upload failed."
