@@ -6,6 +6,8 @@ This repository contains UI theme packages that can be installed in XNAT 1.7.3 o
 > in this repo _require_ **XNAT 1.7.3** or higher for proper functionality and should be
 > used as a reference for theme development going forward.
 
+> Support for UI themes in XNAT is still relatively new. If you run across a bug, please
+> send a bug report to bugs@xnat.org.
 
 ## Installing a Theme
 
