@@ -93,8 +93,8 @@ will be used where theme-specific items are supported.
 
 Custom CSS style overrides will be automatically loaded from `/css/theme.css`, and redefined 
 style rules will override default styles contained in the main `app.css` file. If you need
-to load more css files, you can do so with a simple `@include` statement in the `theme.css` 
-file or include them as any other stylesheet in your theme's custom pages.
+to load more css files, you can do so with a simple `@import` statement in the `theme.css` 
+file or include them as you would any other stylesheet in your theme's custom pages.
 
 ### Theme JavaScript File(s)
 
@@ -162,7 +162,7 @@ a theme template.
 
 When creating JSP templates, make sure to start your file with _AT LEAST_ the following lines:
 
-```xml
+```
 <%@ page contentType="text/html" pageEncoding="UTF-8" trimDirectiveWhitespaces="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="pg" tagdir="/WEB-INF/tags/page" %>
@@ -172,7 +172,7 @@ When creating JSP templates, make sure to start your file with _AT LEAST_ the fo
 You'll also want to include the `init.tag` file for access to certain JSP variables and the
 `jsvars.tag` file for access to JavaScript variables that can be used in your js functions.
 
-```html
+```xml
 <pg:init/>
 <pg:jsvars/>
 ```
@@ -182,7 +182,7 @@ by putting restricted content inside a custom `<pg:restricted>` tag:
 
 Then put the secure content inside the `<pg:restricted>` tag:
 
-```html
+```xml
 <pg:restricted> Administrators Only </pg:restricted>
 ```
 
@@ -199,8 +199,8 @@ for the first part of the path, as shown here:
 <img src="${themeRoot}/images/foo.png">
 ```
 
-In Velocity templates, a `$themeRoot` variable is not defined, but the theme name itself is 
-defined in the `$theme` variable. To load the same `foo.png` image shown above in a Velocity
+In Velocity templates, the theme name itself is defined in the `$theme` variable (but there's no 
+predefined `$themeRoot` variable). To load the same `foo.png` image shown above in a Velocity
 template, you'd need to include the `/themes/` part of the url:
 
 ```html
@@ -225,13 +225,13 @@ page that's loading it.
 JSP pages or page fragments can be included using a relative (to the parent page) path with the 
 JSP `include` directive:
 
-```xml
+```
 <%@ include file="foo.jsp" %>
 ```
 
 ...or using an absolute path with the `<jsp:include/>` JSTL tag...
 
-```html
+```xml
 <jsp:include page="${themeRoot}/pages/foo.jsp"/>
 ```
 
